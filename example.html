@@ -5,53 +5,156 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>example.html</title>
     <style>
-        #div_title{
-            font-size: 3.5rem;
-            text-align:center;
+        #div_1room{
+            font-size: 2.5rem;
+            margin-left: 70px;
+            margin-top: 20px;
         }
-        #div_explain{
-            font-size: 1.125rem;
-            text-align:center;
+        #div_1room1{
+            font-size: 1.15rem;
+            margin-left: 70px;
+            margin-top: 10px;
         }
-        #div_room1{
-            font-size: 3rem;
-            text-align:center;
-            border: #000000 solid 5px;
+        #div_1room2{
+            margin-left: 70px;
+            margin-top: 20px;
+        }
 
-            width: 200px;
-            height: 70px;
+        #div_2room{
+            font-size: 2rem;
+            margin-left: 70px;
+            margin-top: 20px;
         }
-        #div_room2{
-            font-size: 3rem;
-            border: #000000 solid 5px;
-
-            width: 200px;
-            height: 70px;
+        #div_2room1{
+            margin-left: 70px;
+            margin-top: 20px;
+            margin-bottom: 20px;
         }
-        #div_room3{
-            font-size: 3rem;
-            border: #000000 solid 5px;
-            width: 200px;
-            height: 70px;
+        #div_3room{
+            font-size: 2rem;
+            margin-left: 70px;
+            margin-top: 20px;
+        }
+        #div_3room1{
+            margin-left: 70px;
+            margin-top: 20px;
+            margin-bottom: 20px;
         }
     </style>
 </head>
 <body>
-    <div id="div_title">Pricing</div>
+    <div id="div_1room">Bootstrap grid examples</div>
+    <div id="div_1room1">Basic grid layouts to get you familiar with building within the Bootstrap grid system.</div>
+    <div id="div_1room2">In these examples the .themed-grid-col class is added to the columns to add some theming. This is not a class that is available in Bootstrap by default.    </div>
+    
+    <div id="div_2room">Five grid tiers</div>
+    <div id="div_2room1">There are five tiers to the Bootstrap grid system, one for each range of devices we support. Each tier starts at a minimum viewport size and automatically applies to the larger devices unless overridden.</div>
 
-    <div id="div_explain">Quickly build an effective pricing table for your potential customers with 
-    </br>this Bootstrap example. It’s built with default Bootstrap components and 
-    </br>utilities with little customization.
-    </div>
-
-    <div id="div_room1">$0/mo</div>
-    <div id="div_room2">Pricing</div>
-    <div id="div_room3">Pricing</div>
-
-
-    <input type="text" id="input_1" value="0001" class="input basic">
+    <table style="width:80%; margin-left:70px; text-align: center; background-color:#e5dafa; border:1px solid #6610f2">
+        <thread>
+            <tr>
+                <td>.col-4</td>
+                <td>.col-4</td>
+                <td>.col-4</td>
+            </tr>
+        </thread>
+    </table>
     </br>
-    <input type="text" id="input_1" value="0001" class="input basic">
+    <table style="width:80%; margin-left:70px; text-align: center; background-color:#e5dafa; border:1px solid #6610f2">
+        <thread>
+            <tr>
+                <td>.col-sm-4</td>
+                <td>.col-sm-4</td>
+                <td>.col-sm-4</td>
+            </tr>
+        </thread>
+    </table>
+    </br>
+    <table style="width:80%; margin-left:70px; text-align: center; background-color:#e5dafa; border:1px solid #6610f2">
+        <thread>
+            <tr>
+                <td>.col-md-4</td>
+                <td>.col-md-4</td>
+                <td>.col-md-4</td>
+            </tr>
+        </thread>
+    </table>
+    </br>
+    <table style="width:80%; margin-left:70px; text-align: center; background-color:#e5dafa; border:1px solid #6610f2">
+        <thread>
+            <tr>
+                <td>.col-lg-4</td>
+                <td>.col-lg-4</td>
+                <td>.col-lg-4</td>
+            </tr>
+        </thread>
+    </table>
+    </br>
+    <table style="width:80%; margin-left:70px; text-align: center; background-color:#e5dafa; border:1px solid #6610f2">
+        <thread>
+            <tr>
+                <td>.col-xl-4</td>
+                <td>.col-xl-4</td>
+                <td>.col-xl-4</td>
+            </tr>
+        </thread>
+    </table>
+    </br>
+    <table style="width:80%; margin-left:70px; text-align: center; background-color:#e5dafa; border:1px solid #6610f2">
+        <thread>
+            <tr>
+                <td>.col-xxl-4</td>
+                <td>.col-xxl-4</td>
+                <td>.col-xxl-4</td>
+            </tr>
+        </thread>
+    </table>
 
+    <div id="div_3room">Three equal columns</div>
+    <div id="div_3room1">Get three equal-width columns starting at desktops and scaling to large desktops. On mobile devices, tablets and below, the columns will automatically stack.    </div>
+    <table style="width:80%; margin-left:70px; text-align: center; background-color:#e5dafa; border:1px solid #6610f2">
+        <thread>
+            <tr>
+                <td>.col-md-4</td>
+                <td>.col-md-4</td>
+                <td>.col-md-4</td>
+            </tr>
+        </thread>
+    </table>
+
+    <div id="div_3room">Three equal columns alternative</div>
+    <div id="div_3room1">By using the .row-cols-* classes, you can easily create a grid with equal columns.</div>
+    <table style="width:80%; margin-left:70px; text-align: center; background-color:#e5dafa; border:1px solid #6610f2">
+        <thread>
+            <tr>
+                <td>.col child of .row-cols-md-3</td>
+                <td>.col child of .row-cols-md-3</td>
+                <td>.col child of .row-cols-md-3</td>
+            </tr>
+        </thread>
+    </table>
+
+    <div id="div_3room">Three unequal columns</div>
+    <div id="div_3room1">Get three columns starting at desktops and scaling to large desktops of various widths. Remember, grid columns should add up to twelve for a single horizontal block. More than that, and columns start stacking no matter the viewport.</div>
+    <table style="width:80%; margin-left:70px; text-align: center; background-color:#e5dafa; border:1px solid #6610f2">
+        <thread>
+            <tr>
+                <td>.col-md-3</td>
+                <td>.col-md-6</td>
+                <td>.col-md-3</td>
+            </tr>
+        </thread>
+    </table>
+
+    <div id="div_3room">Two columns</div>
+    <div id="div_3room1">Get two columns starting at desktops and scaling to large desktops.</div>
+    <table style="width:80%; margin-left:70px; text-align: center; background-color:#e5dafa; border:1px solid #6610f2">
+        <thread>
+            <tr>
+                <td>.col-md-8</td>
+                <td>.col-md-4</td>
+            </tr>
+        </thread>
+    </table>
 </body>
 </html>
