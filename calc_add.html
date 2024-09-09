@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calaculator</title>
+</head>
+<body>
+    <input id="add_1" type="number" />+
+    <input id="add_2" type="number" />=
+    <input id="sum" type="number" />
+    <button onclick="add()">더해주세요</button>
+    <script>
+        function add(){
+            let num1 = document.getElementById("add_1").value;
+            let num2 = document.getElementById("add_2").value;
+
+            let sum = Number(num1) + Number(num2);
+            //alert(sum)
+            document.getElementById("sum").value = sum;
+        }
+
+
+    </script>
+</body>
+</html>
