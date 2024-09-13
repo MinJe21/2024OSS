@@ -55,6 +55,8 @@
     </style>
 
 <body class="container">
+  <form name="forming" onsubmit="return valid()" method="post" >
+
   <label for="today">Today's date:</label>
   <input type="date" id="today" name="today" value="2024-09-14" min="2000-01-01" max="2030-12-31" />
 
@@ -68,9 +70,17 @@
   <h4 >Billing address</h4>
   <div class="m">
     <label for="firstName" class="form-label">First name</label>
-    <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
-    <label for="lastName" class="form-label">Last name</label>
+    <input type="text" class="form-control" id="firstName" name="firstname" placeholder="" value="" required>
+    <label for="lastName" class="form-label"  name="lastname">Last name</label>
     <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
+    <script>
+      let first = document.getElementById("firstname");
+      if(first.value == ""){
+        alert("kkk");
+        first.focus();
+        return false;
+      }
+    </script>
   </div>
 
   <div class="m">
@@ -162,8 +172,30 @@
   <label for="tell">하고싶은 말</label> <br>
     <textarea id="tell" name="tell" rows="5" cols="50">oss파이팅!</textarea>
     <br>
-    <button class="w-100 btn btn-primary btn-lg" type="submit">Continue to checkout</button>
+    <button type="submit" value="submit">Continue to checkout</button>
   </div>
   </div>
+  </form>
+  
+  <script>
+    function valid(){
+      let first = forming.firstname.value;
+      if(first == "" || first == "undefined"){
+        forming.firstname.focus();
+        alert("적어주세요");
+        return false;
+      }
+
+
+      if(input_append === "" || input_append == "undefined"){
+            alert('내용을 모두 작성해주세요!');
+        }
+
+      window.addEventListener('resize', function() {
+        alert('ddd');    
+  });
+    }
+
+  </script>
 </body>
 </html>

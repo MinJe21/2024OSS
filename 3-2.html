@@ -38,6 +38,7 @@
         let input_append = document.getElementById("input_append").value;
         //alert(input_append);
         if(input_append === "" || input_append == "undefined"){
+            alert('ddd');
             return false;
         }
         div_append.innerHTML += "<div onclick='listener_remove(this)'>"+input_append +"</div>";
