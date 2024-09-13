@@ -36,6 +36,7 @@
 <input type="text" style="padding-top: 7px; padding-bottom: 5px; width: 50%; text-align: center;" id="input_append" />
 <button style="padding:3px; font-size: larger;" onclick="listener_append()">등록</button>
 <button style="padding:3px; font-size: larger;" onclick="delete_all()">전체 삭제</button>
+
 <div id="div_append">
 
 </div>
@@ -46,7 +47,7 @@
         if(input_append === "" || input_append == "undefined"){
             return false;
         }
-        div_append.innerHTML += "<div onclick='listener_remove(this)'>"+input_append +"</div>";
+        div_append.innerHTML += "<div onclick='listener_remove(this)'>"+'<li>'+input_append+'</li>' +"</div>";
         document.getElementById("input_append").value = "";
     }
     
