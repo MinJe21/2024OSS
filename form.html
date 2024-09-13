@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>form.html</title>
+    
+    <link rel="shortcut icon" href="../img/star.jpg">
+    <style>
+    
+    .container{
+        width: 30%;
+        margin-left: 35%;
+        text-align: center;
+    }
+
+    .title{
+        font-size: 40px;
+        background-color: rgb(236, 255, 212);
+
+    }
+
+    @media (max-width: 800px) {
+        .input_basic {
+            background-color: brown;
+        }   
+    }
+    </style>
+</head>
+
+<body class="container">
+
+<div class="title">DYNAMIC WEB PAGE</div>
+<input type="text" style="padding-top: 7px; padding-bottom: 5px; width: 50%; text-align: center;" id="input_append" />
+<button style="padding:3px; font-size: larger;" onclick="listener_append()">등록</button>
+<button style="padding:3px; font-size: larger;" onclick="delete_all()">전체 삭제</button>
+<div id="div_append">
+
+</div>
+<script>
+    function listener_append(){
+        let div_append = document.getElementById("div_append");
+        let input_append = document.getElementById("input_append").value;
+        if(input_append === "" || input_append == "undefined"){
+            return false;
+        }
+        div_append.innerHTML += "<div onclick='listener_remove(this)'>"+input_append +"</div>";
+        document.getElementById("input_append").value = "";
+    }
+    
+    function listener_remove(obj){
+        obj.remove();
+    }
+    function delete_all(){
+        let div_append = document.getElementById("div_append");
+        div_append.innerHTML = "";
+        document.getElementById("input_append").value = "";
+    }
+</script>
+
+</body>
+</html>
