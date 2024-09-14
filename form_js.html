@@ -70,22 +70,14 @@
   <h4 >Billing address</h4>
   <div class="m">
     <label for="firstName" class="form-label">First name</label>
-    <input type="text" class="form-control" id="firstName" name="firstname" placeholder="" value="" required>
+    <input type="text" class="form-control" id="firstName" name="firstname" placeholder="" value="">
     <label for="lastName" class="form-label"  name="lastname">Last name</label>
-    <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
-    <script>
-      let first = document.getElementById("firstname");
-      if(first.value == ""){
-        alert("kkk");
-        first.focus();
-        return false;
-      }
-    </script>
+    <input type="text" class="form-control" id="lastName" placeholder="" value="">
   </div>
 
   <div class="m">
     <label for="username" class="form-label">Username</label>
-    <input type="text" class="form-control" id="username" placeholder="Username" required>
+    <input type="text" class="form-control" id="username" placeholder="Username">
   </div>
 
   <div class="m">
@@ -95,7 +87,7 @@
 
   <div class="m">
     <label for="address" class="form-label">Address</label>
-    <input type="text" class="form-control" id="address" placeholder="1234 Main St" required>
+    <input type="text" class="form-control" id="address" placeholder="1234 Main St">
   </div>
 
   <div class="m">
@@ -105,17 +97,17 @@
 
   <div class="m">
     <label for="country" class="form-label">Country</label>
-    <select class="form-select" id="country" required>
+    <select class="form-select" id="country">
       <option value="">Choose...</option>
       <option>United States</option>
     </select>
     <label for="state" class="form-label">State</label>
-    <select class="form-select" id="state" required>
+    <select class="form-select" id="state">
       <option value="">Choose...</option>
       <option>California</option>
     </select>
     <label for="zip" class="form-label">Zip</label>
-    <input type="text" class="form-control" style="width:5%;"  id="zip" placeholder="" required>
+    <input type="text" class="form-control" style="width:5%;"  id="zip" placeholder="">
   </div>
 
 
@@ -134,38 +126,38 @@
   <h4>Payment</h4>
 
   <div class="c">
-    <input id="credit" name="paymentMethod" type="radio" class="form-check-input" checked required>
+    <input id="credit" name="paymentMethod" type="radio" class="form-check-input">
       <label class="form-check-label" for="credit">Credit card</label>
   </div>
 
   <div class="c">
-    <input id="debit" name="paymentMethod" type="radio" class="form-check-input" required>
+    <input id="debit" name="paymentMethod" type="radio" class="form-check-input">
     <label class="form-check-label" for="debit">Debit card</label>
   </div>
 
   <div class="c"> 
-    <input id="paypal" name="paymentMethod" type="radio" class="form-check-input" required>
+    <input id="paypal" name="paymentMethod" type="radio" class="form-check-input">
     <label class="form-check-label" for="paypal">PayPal</label>
   </div>
 
 
   <div class="m">
     <label for="cc-name" class="form-label">Name on card</label>
-    <input type="text" class="form-control" id="cc-name" placeholder="" required><br>
+    <input type="text" class="form-control" id="cc-name" placeholder=""><br>
     <small>Full name as displayed on card</small>
   </div>
 
   <div class="m">
     <label for="cc-number" class="form-label">Credit card number</label>
-    <input type="text" class="form-control" id="cc-number" placeholder="" required>
+    <input type="text" class="form-control" id="cc-number" placeholder="">
   </div>
 
   <div class="m">
     <label for="cc-expiration" class="form-label">Expiration</label>
-    <input type="text" class="form-control" id="cc-expiration" placeholder="" required>
+    <input type="text" class="form-control" id="cc-expiration" placeholder="">
 
     <label for="cc-cvv" class="form-label">CVV</label>
-    <input type="text" class="form-control" id="cc-cvv" placeholder="" required>
+    <input type="text" class="form-control" id="cc-cvv" placeholder="">
   </div>
 
   <div class="m">
@@ -180,20 +172,94 @@
   <script>
     function valid(){
       let first = forming.firstname.value;
+      let last = forming.lastname.value;
+      let user = forming.username.value;
+      let em = forming.email.value;
+      let ad = forming.address.value;
+      let cnty = forming.country.value;
+      let st = forming.state.value;
+      let z = forming.zip.value;
+      let cc = forming.cc-name.value;
+      let ccnu = forming.cc-number.value;
+      let cce = forming.cc-expiration.value;
+      let ccv = forming.cc-cvv.value;
+
       if(first == "" || first == "undefined"){
         forming.firstname.focus();
         alert("적어주세요");
         return false;
       }
 
+      if(last == "" || last == "undefined"){
+        forming.username.focus();
+        alert("적어주세요");
+        return false;
+      }
 
-      if(input_append === "" || input_append == "undefined"){
-            alert('내용을 모두 작성해주세요!');
-        }
+      if(user == "" || user == "undefined"){
+        forming.username.focus();
+        alert("적어주세요");
+        return false;
+      }
+
+      if(em == "" || em == "undefined"){
+        forming.email.focus();
+        alert("적어주세요");
+        return false;
+      }
+
+      if(ad == "" || ad == "undefined"){
+        forming.address.focus();
+        alert("적어주세요");
+        return false;
+      }
+
+      if(cnty == "" || cnty == "undefined"){
+        forming.country.focus();
+        alert("적어주세요");
+        return false;
+      }
+
+      if(st == "" || st == "undefined"){
+        forming.state.focus();
+        alert("적어주세요");
+        return false;
+      }
+
+      if(z == "" || z == "undefined"){
+        forming.zip.focus();
+        alert("적어주세요");
+        return false;
+      }
+
+      if(cc == "" || cc == "undefined"){
+        forming.cc-name.focus();
+        alert("적어주세요");
+        return false;
+      }
+
+      if(ccnu == "" || ccnu == "undefined"){
+        forming.cc-number.focus();
+        alert("적어주세요");
+        return false;
+      }
+
+      if(cce == "" || cce == "undefined"){
+        forming.cc-expiration.focus();
+        alert("적어주세요");
+        return false;
+      }
+
+      if(ccv == "" || ccv == "undefined"){
+        forming.cc-ccv.focus();
+        alert("적어주세요");
+        return false;
+      }
+
 
       window.addEventListener('resize', function() {
-        alert('ddd');    
-  });
+        alert('사이즈가 바뀜');    
+    });
     }
 
   </script>
