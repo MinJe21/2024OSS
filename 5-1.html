@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Bootstrap demo</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    </head>
+    <body>
+        <div id="div_123">123</div>
+        <div id="div_1" class="div_0">1</div>
+        <div id="div_2" class="div_0">2</div>
+        <div id="div_3" class="div_0">3</div>
+        <div id="div_4" class="div_0">4</div>
+
+        <input type="text" id="input_01" class="form_input"/>
+
+        <button type="button" class="btn btn-primary" onclick="getInputValue()">값가지기</button>
+
+        <!-- J-Query -->
+        <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+        <script>
+            function getInputValue(){
+                let input_01 = $("#input_01").val();
+                alert(input_01);
+
+                $("#input_01").val("new value");
+            }
+
+            //let id_123 = $("div_123");
+            //alert($("div_123").html());
+
+            //let div_0 = $(".div_0");
+            //alert("div_0 length : " + $("div_0").length());
+
+            //for(let i = 0; i < div_0.length; i++){
+
+            //}
+        </script>
+    </body>
+</html>
