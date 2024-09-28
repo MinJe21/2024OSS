@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>add.html</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="my.css">
+    <style>
+        .divider {
+            border-bottom: 1px solid black;
+            margin-top: 5%;
+        }
+        .text_design {
+            width: 60%;
+            text-align: center;
+            margin-left: 20%;
+        }
+        .error {
+            color: red;
+            font-size: 0.9em;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-4 divider">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <h2 style="text-align: center;">휴대폰 목록 추가하기</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="mb-3 text_design">
+            <label for="phone_type" class="form-label" style="float:left; font-style:italic; padding-top: 10px;"><h5>기종</h5></label>
+            <input type="text" class="form-control" name="phone_type" id="phone_type" style="text-align: center; width: 50%; margin-left: 20%;margin-top: 5%;">
+            <div id="phoneTypeError" class="error"></div>
+        </div>
+        <div class="mb-3 text_design">
+            <label for="company" class="form-label" style="float:left; font-style:italic; padding-top: 10px;"><h5>폰회사</h5></label>
+            <input type="text" class="form-control" name="company" id="company" style="text-align: center; width: 50%; margin-left: 20%; margin-top: 5%;">
+            <div id="companyError" class="error"></div>
+        </div>
+        <div class="mb-3 text_design">
+            <label for="price" class="form-label" style="float:left; font-style:italic; padding-top: 10px;"><h5>가격</h5></label>
+            <input type="text" class="form-control" name="price" id="price" style="text-align: center; width: 50%; margin-left: 20%;margin-top: 5%;">
+            <div id="priceError" class="error"></div>
+        </div>
+        <div class="mb-3 text_design">
+            <label for="quantity" class="form-label" style="float:left; font-style:italic; padding-top: 10px;"><h5>수량</h5></label>
+            <input type="text" class="form-control" name="quantity" id="quantity" style="text-align: center; width: 50%; margin-left: 20%;margin-top: 5%;">
+            <div id="quantityError" class="error"></div>
+        </div>
+        <div class="mb-3 text_design">
+            <label for="capacity" class="form-label" style="float:left; font-style:italic; padding-top: 10px;"><h5>용량</h5></label>
+            <input type="text" class="form-control" name="capacity" id="capacity" style="text-align: center; width: 50%; margin-left: 20%;margin-top: 5%;">
+            <div id="capacityError" class="error"></div>
+        </div>
+        <div class="mb-3 text_design">
+            <label for="status" class="form-label" style="float:left; font-style:italic; padding-top: 10px;"><h5>상태</h5></label>
+            <input type="text" class="form-control" name="status" id="status" style="text-align: center; width: 50%; margin-left: 20%;margin-top: 5%;">
+            <div id="statusError" class="error"></div>
+        </div>
+        
+        <div class="form-inline">
+          <a href="./index.html" class="btn btn-primary ml-2" style="float: right; margin-right:20%;">취소</a>
+        </div>
+        <div class="form-inline">
+            <button type="button" class="btn btn-primary" style="margin-left:20%;" onclick="validateAndSubmit()">Submit</button>
+        </div>
+    </div>
+
+    <script>
+        function validateAndSubmit() {
+
+            let errorElements = document.querySelectorAll('.error');
+            errorElements.forEach(function (error) {
+                error.textContent = '';
+            });
+
+            let company = document.getElementById('company').value;
+            let phoneType = document.getElementById('phone_type').value;
+            let price = document.getElementById('price').value;
+            let quantity = document.getElementById('quantity').value;
+            let capacity = document.getElementById('capacity').value;
+            let status = document.getElementById('status').value;
+
+            let isValid = true;
+
+            if (company === "") {
+                document.getElementById('companyError').textContent = "폰회사를 입력하세요.";
+                document.getElementById('company').focus();
+                isValid = false;
+            }
+            if (phoneType === "") {
+                document.getElementById('phoneTypeError').textContent = "기종을 입력하세요.";
+                document.getElementById('phone_type').focus();
+                isValid = false;
+            }
+            if (price === "") {
+                document.getElementById('priceError').textContent = "가격을 입력하세요.";
+                document.getElementById('price').focus();
+                isValid = false;
+            }
+            if (quantity === "") {
+                document.getElementById('quantityError').textContent = "수량을 입력하세요.";
+                document.getElementById('quantity').focus();
+                isValid = false;
+            }
+            if (capacity === "") {
+                document.getElementById('capacityError').textContent = "용량을 입력하세요.";
+                document.getElementById('capacity').focus();
+                isValid = false;
+            }
+            if (status === "") {
+                document.getElementById('statusError').textContent = "상태를 입력하세요.";
+                document.getElementById('status').focus();
+                isValid = false;
+            }
+            if (isValid) {
+                alert("게시물이 추가됩니다");
+            }
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

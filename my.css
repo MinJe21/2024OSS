@@ -1,0 +1,18 @@
+@media (max-width: 576px) {
+    body {
+        background-color: #d2f7d2; /* 연한 연두색 */
+        color: rgb(183, 14, 14);    
+    }
+    
+    .container {
+        padding: 10px;
+    }
+    h2 {
+        font-size: 1.5em;
+    }
+    
+    .btn {
+        margin:0%;
+        width: 100%; /* 버튼을 100% 너비로 설정 */
+    }
+}
