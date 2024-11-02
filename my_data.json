@@ -1,0 +1,14 @@
+{
+    "phone": [
+    { "id": 1, "phone_name": "Z-flip4", "company": "삼성", "price": "70만원", "capacity": "64GB" },
+    { "id": 2, "phone_name": "Galaxy-S11", "company": "삼성", "price": "40만원", "capacity": "64GB" },
+    { "id": 3, "phone_name": "Z-Folder3", "company": "삼성", "price": "150만원", "capacity": "64GB" },
+    { "id": 4, "phone_name": "i-phone12", "company": "애플", "price": "90만원", "capacity": "64GB" },
+    { "id": 5, "phone_name": "i-phone12 mini", "company": "애플", "price": "95만원", "capacity": "64GB" },
+    { "id": 6, "phone_name": "i-phoneXR", "company": "애플", "price": "40만원", "capacity": "64GB" },
+    { "id": 7, "phone_name": "Galaxy-S13", "company": "삼성", "price": "75만원", "capacity": "64GB" },
+    { "id": 8, "phone_name": "i-pad", "company": "애플", "price": "120만원", "capacity": "64GB" },
+    { "id": 9, "phone_name": "Galaxy-Tab", "company": "삼성", "price": "90만원", "capacity": "64GB" },
+    { "id": 10, "phone_name": "Z-flip5", "company": "삼성", "price": "140만원", "capacity": "64GB" }
+    ]
+  }
